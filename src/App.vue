@@ -69,45 +69,41 @@
       <div class="footer-grid">
         <!-- Branding / Contact -->
         <div class="footer-col brand-col">
-          <h2 class="footer-logo">CELLULAR CENTER</h2>
-          <p class="contact-email"><a href="mailto:contacto@cellularcenter.com">contacto@cellularcenter.com</a></p>
+          <h2 class="footer-logo">CELLULAR CENTER.</h2>
+          <p class="contact-email"><a href="mailto:h.ushu@hotmail.com">h.ushu@hotmail.com</a></p>
           <div class="phones">
-            <a href="tel:0917909616">0917909616</a>
+            <a href="tel:0997197439">0997197439</a>
           </div>
-          <p class="copyright">&copy; {{ new Date().getFullYear() }} Cellular Center. All rights reserved.</p>
+          <p class="copyright">&copy; 2026 ORTEGA AVILES HENRY GIOVANNI. All rights reserved.</p>
         </div>
 
         <!-- Verification Data -->
         <div class="footer-col legal-data">
-          <h4>Datos de Verificación Comercial</h4>
+          <h4>Información Comercial y Tributaria</h4>
           <div class="data-grid">
             <div class="data-item">
-              <span class="label">Razón Social</span>
+              <span class="label">Razón Social / Propietario</span>
               <span class="value">ORTEGA AVILES HENRY GIOVANNI</span>
             </div>
             <div class="data-item">
               <span class="label">RUC</span>
               <span class="value">0917909616001</span>
             </div>
-            <div class="data-item">
-              <span class="label">Cédula / Licencia #</span>
-              <span class="value">0917909616</span>
+            <div class="data-item span-2">
+              <span class="label">Actividades</span>
+              <span class="value">Venta al por mayor de teléfonos y equipos de comunicación, y servicios de reparación y mantenimiento de sistemas informáticos.</span>
             </div>
             <div class="data-item">
-              <span class="label">Fecha de Nacimiento</span>
-              <span class="value">28-01-1989</span>
+              <span class="label">Estado / Régimen</span>
+              <span class="value">Activo / Régimen General</span>
             </div>
-            <div class="data-item">
-              <span class="label">Nacionalidad</span>
-              <span class="value">Ecuador</span>
+            <div class="data-item span-2">
+              <span class="label">Fechas SRI</span>
+              <span class="value">Registro: 24/04/2007 | Última Actualización: 22/08/2024</span>
             </div>
-            <div class="data-item">
-              <span class="label">Dirección</span>
-              <span class="value">URB. TORRES DEL RIO DPTO. C 104</span>
-            </div>
-            <div class="data-item">
-              <span class="label">Licencia Emisión/Vencimiento</span>
-              <span class="value">21-01-2025 / 20-01-2030 (Cat. B)</span>
+            <div class="data-item span-2">
+              <span class="label">Verificación SRI</span>
+              <span class="value">RCR1783119672725484</span>
             </div>
           </div>
         </div>
@@ -116,12 +112,23 @@
         <div class="footer-col address-col">
           <h4>Ubicación</h4>
           <p>
-            Vía a la Costa Km 12.5,<br>
-            C.C. Laguna Plaza, Local 317<br>
-            (Primer piso alto junto al ascensor)<br>
-            Guayaquil, Ecuador
+            Av. Plaza Dañín 26 e Intersección 05,<br>
+            (Frente a Andrés Borbor), Parroquia Tarqui,<br>
+            Código Postal 090308<br>
+            Guayaquil, Guayas, Zona 8<br>
+            Ecuador
           </p>
+          <div class="tax-badges">
+            <span class="badge">IVA</span>
+            <span class="badge">Declaración de IVA</span>
+          </div>
         </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="developer-credit">
+          Hecho por <a href="https://github.com/MrKanx" target="_blank" rel="noopener noreferrer">Kankox</a>
+        </p>
       </div>
     </footer>
   </div>
@@ -437,6 +444,33 @@ $color-muted: #888888;
       }
     }
 
+    .address-col {
+      .tax-badges {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+
+        .badge {
+          font-size: 0.7rem;
+          padding: 0.25rem 0.5rem;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 4px;
+          color: $color-muted;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          transition: all 0.3s ease;
+          cursor: default;
+
+          &:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+          }
+        }
+      }
+    }
+
     .legal-data {
       .data-grid {
         display: grid;
@@ -448,6 +482,10 @@ $color-muted: #888888;
           flex-direction: column;
           gap: 0.2rem;
 
+          &.span-2 {
+            grid-column: span 2;
+          }
+
           .label {
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -458,6 +496,30 @@ $color-muted: #888888;
             font-size: 0.85rem;
             color: #ccc;
           }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+
+    .developer-credit {
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 0.05em;
+
+      a {
+        color: #777;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ccc;
         }
       }
     }
@@ -505,6 +567,10 @@ $color-muted: #888888;
 @media (max-width: 768px) {
   .legal-footer .legal-data .data-grid {
     grid-template-columns: 1fr;
+    
+    .span-2 {
+      grid-column: span 1;
+    }
   }
 }
 </style>
